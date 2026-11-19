@@ -17,7 +17,7 @@ ifeq ($(filter command line,$(origin TARGET)),)
       $(error Alternate device SDK builds require APOLLO_DEVICE_DEPLOY=15.0 or newer; use SDK 26.0 for iOS 14 support)
     endif
   endif
-  APOLLO_DEVICE_DEPLOY ?= 14.0
+  APOLLO_DEVICE_DEPLOY ?= 12.0
   TARGET := iphone:clang:$(APOLLO_DEVICE_SDK):$(APOLLO_DEVICE_DEPLOY)
   $(info [ApolloReborn] Device Theos SDK pin $(APOLLO_DEVICE_SDK) (TARGET=$(TARGET)))
 endif
